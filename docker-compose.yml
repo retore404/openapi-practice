@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    spring:
+        container_name: openapi-practice-spring
+        image: eclipse-temurin:17
+        tty: true
+        volumes:
+            - ./app:/workspace/app
+            - ./volumes:/workspace/volumes
+        working_dir: /workspace
+        ports:
+            - 8080:8080
+            - 5050:5050
